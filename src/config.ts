@@ -1,0 +1,157 @@
+export const config = {
+    developer: {
+        name: "Rachid",
+        fullName: "Rachid Bourjila",
+        title: "AI & Industry 4.0 Engineer",
+        description: "Engineering student blending industrial IoT, AI/ML, and full-stack development to turn shop-floor data into performance. Convinced that technology only matters when it concretely improves the process."
+    },
+    social: {
+        github: "rachidbr6",
+        email: "rachid.bourjila13@gmail.com",
+        location: "Nancy, France"
+    },
+    about: {
+        title: "About Me",
+        description: "I'm a dual-degree engineering student at ENSGSI Nancy (INP Nancy) and Mines Rabat, focused on industrial digitalization and continuous improvement. I combine software development (Python, IoT, AI) with industrial methods (Lean, TPM, TRS/OEE) to turn shop-floor data into real performance gains. During my internship at OCP Group I built an IoT pipeline from sensors to real-time dashboards and used machine learning to catch anomalies before they became downtime. I'm currently exploring how LLMs like Claude can act as an industrial co-pilot — reading sensor alerts, reasoning about failures, and writing the maintenance report so the technician doesn't have to."
+    },
+    experiences: [
+        {
+            position: "Digitalization & Industrial AI Intern",
+            company: "OCP Group — Maintenance Department",
+            period: "2025",
+            location: "Morocco",
+            description: "Deployed an end-to-end IoT pipeline (sensors → MQTT → InfluxDB → real-time dashboards) and applied machine learning to detect equipment anomalies before failure.",
+            responsibilities: [
+                "Deployed an IoT pipeline: temperature, vibration and pressure sensors → MQTT broker → InfluxDB → real-time dashboards",
+                "Built Python scripts for automated sensor data processing and anomaly detection with Isolation Forest",
+                "Shipped Power BI dashboards for TRS/OEE indicators, cutting analysis time by 40% for maintenance teams",
+                "Drove continuous improvement (TPM): 5 Whys and Ishikawa root-cause analysis, technical procedure write-ups"
+            ],
+            technologies: ["Python", "IoT", "MQTT", "InfluxDB", "Power BI", "Isolation Forest", "TPM"]
+        },
+        {
+            position: "Web Development & Technical Support Intern",
+            company: "RAMSA",
+            period: "2023 - 2024",
+            location: "Agadir, Morocco",
+            description: "Built a full-stack leave management application with a built-in HR chatbot, digitalizing RAMSA's leave request workflow.",
+            responsibilities: [
+                "Built a leave management web app (PHP, MySQL, Bootstrap, AJAX) with hierarchical approval: department head → division head → HR",
+                "Built a chatbot embedded in the employee dashboard answering policy/procedure questions with no external API dependency",
+                "Wrote functional documentation and trained end users"
+            ],
+            technologies: ["PHP", "MySQL", "Bootstrap", "AJAX"]
+        },
+        {
+            position: "Engineering Degree — Systems Engineering & Innovation",
+            company: "ENSGSI, INP Nancy",
+            period: "2025 - Present",
+            location: "Nancy, France",
+            description: "Double-degree engineering program focused on systems engineering, innovation and industrial digitalization.",
+            responsibilities: [],
+            technologies: ["Systems Engineering", "Innovation", "Digitalization"]
+        },
+        {
+            position: "Engineering Degree — Computer Engineering",
+            company: "Mines Rabat",
+            period: "2023 - Present",
+            location: "Rabat, Morocco",
+            description: "Engineering degree in computer engineering, alongside the double-degree program at ENSGSI Nancy.",
+            responsibilities: [],
+            technologies: ["Computer Engineering", "Software", "Algorithms"]
+        },
+        {
+            position: "CPGE MPSI / MP — Preparatory Classes",
+            company: "Classes Préparatoires",
+            period: "2021 - 2023",
+            location: "Morocco",
+            description: "Intensive preparatory classes in mathematics and physics for competitive entry into engineering schools.",
+            responsibilities: [],
+            technologies: ["Mathematics", "Physics"]
+        }
+    ],
+    projects: [
+        {
+            id: 1,
+            title: "Industrial AI Assistant",
+            category: "AI / IoT",
+            technologies: "Python, Isolation Forest, Groq API (Llama 3.3), FastAPI",
+            image: "/images/IndustrialAIAssistant.jpg",
+            description: "Predictive monitoring system: simulated IoT data, unsupervised anomaly detection, and an LLM agent writing natural-language diagnostics. Exposed through a 3-tab FastAPI dashboard — under 3s latency, ~95% anomaly detection.",
+            link: "https://github.com/rachidbr6"
+        },
+        {
+            id: 2,
+            title: "Predictive Maintenance — OCP Group",
+            category: "Industrial IoT / AI",
+            technologies: "MQTT, InfluxDB, Power BI, Isolation Forest, MCP Protocol",
+            image: "/images/OCPPredictiveMaintenance.jpg",
+            description: "PFE internship at OCP Group: an IoT pipeline (sensors → MQTT → InfluxDB → Power BI) with anomaly detection, plus an MCP server connecting LLMs to vibration-analysis tools (FFT, bearing defects, remaining life estimation).",
+            link: ""
+        },
+        {
+            id: 3,
+            title: "Visual Defect Detection",
+            category: "Computer Vision",
+            technologies: "Python, EfficientNetB0, ONNX, TensorRT, OpenCV",
+            image: "/images/VisualDefectDetection.jpg",
+            description: "Computer vision system classifying conforming vs. defective parts (MVTec AD dataset). Fine-tuned EfficientNetB0, deployed on Jetson Nano via TensorRT with real-time OpenCV line simulation — 96.5% accuracy, 97.1% recall.",
+            link: "https://github.com/rachidbr6"
+        },
+        {
+            id: 4,
+            title: "RAMSA — Leave Management & Chatbot",
+            category: "Full-Stack / Web",
+            technologies: "PHP, MySQL, Bootstrap, AJAX",
+            image: "/images/RAMSA.jpg",
+            description: "Leave management platform with hierarchical approval workflow, plus a built-in chatbot answering HR policy questions with no external API dependency.",
+            link: ""
+        },
+        {
+            id: 5,
+            title: "Agronov — The Farmer in 2035 with AI",
+            category: "Group Project / Foresight",
+            technologies: "Power BI, Field Research, Strategic Foresight",
+            image: "/images/Agronov.jpg",
+            description: "ENSGSI group project for AgrOnov: exploring how AI will reshape farming by 2035 through farmer interviews, prospective scenarios and a strategic roadmap.",
+            link: ""
+        },
+        {
+            id: 6,
+            title: "Ultron — Personal AI Assistant",
+            category: "AI / Voice Assistant",
+            technologies: "Python, Speech Recognition, Wake Word Detection, Email API",
+            image: "/images/Ultron.jpg",
+            description: "A personal voice-activated assistant: wake-word activation, reads and triages emails, runs simple tasks, and controls the laptop hands-free.",
+            link: "https://github.com/rachidbr6"
+        },
+        {
+            id: 7,
+            title: "Victorian Library",
+            category: "Personal Project / Web App",
+            technologies: "Catalog, Search, Tags, Reading Log",
+            image: "/images/VictorianLibrary.jpg",
+            description: "A personal book library app with a Victorian, card-catalog aesthetic — search, tag and track what you've read through a dedicated reading log.",
+            link: "https://github.com/rachidbr6"
+        }
+    ],
+    contact: {
+        email: "rachid.bourjila13@gmail.com",
+        github: "https://github.com/rachidbr6",
+        linkedin: "https://www.linkedin.com/in/rachid-b-936085294/"
+    },
+    skills: {
+        develop: {
+            title: "AI & IoT ENGINEER",
+            description: "Turning sensor data into intelligent decisions",
+            details: "Building IoT pipelines and machine learning models to detect anomalies and predict failures — from Raspberry Pi sensor nodes to Isolation Forest and CNN models, including LLM-powered diagnostic agents (Groq/Llama, Claude API).",
+            tools: ["Python", "TensorFlow", "Scikit-learn", "OpenCV", "Pandas", "NumPy", "Claude API", "MQTT", "IoT"]
+        },
+        design: {
+            title: "DIGITALIZATION",
+            description: "Industrial performance & continuous improvement",
+            details: "Deploying dashboards and full-stack tools that turn shop-floor data into decisions — Power BI reporting, REST APIs, and Lean/TPM methods (5 Whys, Ishikawa, TRS/OEE, Six Sigma) to close the loop between data and action.",
+            tools: ["Power BI", "SQL", "FastAPI", "Docker", "Git", "Arena Simulation", "Lean Six Sigma", "TPM", "Excel"]
+        }
+    }
+};
