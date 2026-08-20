@@ -17,7 +17,7 @@ const CallToAction = () => {
           className="cta-btn cta-btn-hire"
           data-cursor="disable"
         >
-          Hire Me →
+          Connect on LinkedIn →
         </a>
       </div>
     </div>
