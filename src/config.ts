@@ -18,7 +18,7 @@ export const config = {
         {
             position: "AI Deployment Project Manager",
             company: "CPAM de Meurthe-et-Moselle",
-            period: "2026 - Present",
+            period: "Now",
             location: "Meurthe-et-Moselle, France",
             description: "A portfolio of over 100 generative AI use cases, a 620 person organization, and health data rules that decide the architecture before anyone writes a line of code. The interesting problem is not the models. It is getting people to use them.",
             responsibilities: [],
@@ -54,7 +54,7 @@ export const config = {
         {
             position: "Engineering Degree — Systems Engineering & Innovation",
             company: "ENSGSI, INP Nancy",
-            period: "2025 - Present",
+            period: "2025 - 2027",
             location: "Nancy, France",
             description: "Double-degree engineering program focused on systems engineering, innovation and industrial digitalization.",
             responsibilities: [],
@@ -63,7 +63,7 @@ export const config = {
         {
             position: "Engineering Degree — Computer Engineering",
             company: "Mines Rabat",
-            period: "2023 - Present",
+            period: "2023 - 2025",
             location: "Rabat, Morocco",
             description: "Engineering degree in computer engineering, alongside the double-degree program at ENSGSI Nancy.",
             responsibilities: [],
