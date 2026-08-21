@@ -2,7 +2,7 @@ export const config = {
     developer: {
         name: "Rachid",
         fullName: "Rachid Bourjila",
-        title: "AI & Industry 4.0 Engineer",
+        title: "Software Engineering and Industry 4.0",
         description: "Engineering student blending industrial IoT, AI/ML, and full-stack development to turn shop-floor data into performance. Convinced that technology only matters when it concretely improves the process."
     },
     social: {
