@@ -12,7 +12,7 @@ export const config = {
     },
     about: {
         title: "About Me",
-        description: "I'm a dual-degree engineering student at ENSGSI Nancy (INP Nancy) and Mines Rabat, focused on industrial digitalization and continuous improvement. I combine software development (Python, IoT, AI) with industrial methods (Lean, TPM, TRS/OEE) to turn shop-floor data into real performance gains. During my internship at OCP Group I built an IoT pipeline from sensors to real-time dashboards and used machine learning to catch anomalies before they became downtime. I'm currently exploring how LLMs like Claude can act as an industrial co-pilot — reading sensor alerts, reasoning about failures, and writing the maintenance report so the technician doesn't have to."
+        description: "I build systems that turn data into decisions people actually act on, then make sure they get used.\n\nI'm a dual degree engineering student at ENSGSI Nancy and Mines Rabat, mixing Python, IoT and AI with industrial method (Lean, TPM, TRS/OEE). At OCP Group I built an IoT pipeline from sensors to live dashboards and used machine learning to catch anomalies before they turned into downtime, cutting analysis time by 40%. The real lesson came from the deployment, not the model: a tool nobody adopts is worth nothing.\n\nIn September I join CPAM de Meurthe-et-Moselle as AI Deployment Project Manager, taking a portfolio of generative AI use cases from backlog to production across 620 people, in a place where health data compliance shapes the design from day one.\n\nOn the side I'm still building the industrial copilot: an LLM that reads sensor alerts, works out what failed, and writes the maintenance report so the technician doesn't have to."
     },
     experiences: [
         {
