@@ -16,6 +16,15 @@ export const config = {
     },
     experiences: [
         {
+            position: "AI Deployment Project Manager",
+            company: "CPAM de Meurthe-et-Moselle",
+            period: "2026 - Present",
+            location: "Meurthe-et-Moselle, France",
+            description: "A portfolio of over 100 generative AI use cases, a 620 person organization, and health data rules that decide the architecture before anyone writes a line of code. The interesting problem is not the models. It is getting people to use them.",
+            responsibilities: [],
+            technologies: ["Generative AI", "Change Management", "Health Data Compliance"]
+        },
+        {
             position: "Digitalization & Industrial AI Intern",
             company: "OCP Group — Maintenance Department",
             period: "2025",
