@@ -41,7 +41,7 @@ export const config = {
         {
             position: "Web Development & Technical Support Intern",
             company: "RAMSA",
-            period: "2023 - 2024",
+            period: "2024",
             location: "Agadir, Morocco",
             description: "Built a full-stack leave management application with a built-in HR chatbot, digitalizing RAMSA's leave request workflow.",
             responsibilities: [
