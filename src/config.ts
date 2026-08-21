@@ -140,18 +140,24 @@ export const config = {
         github: "https://github.com/rachidbr6",
         linkedin: "https://www.linkedin.com/in/rachid-b-936085294/"
     },
-    skills: {
-        develop: {
-            title: "AI & IoT ENGINEER",
-            description: "Turning sensor data into intelligent decisions",
-            details: "Building IoT pipelines and machine learning models to detect anomalies and predict failures — from Raspberry Pi sensor nodes to Isolation Forest and CNN models, including LLM-powered diagnostic agents (Groq/Llama, Claude API).",
-            tools: ["Python", "TensorFlow", "Scikit-learn", "OpenCV", "Pandas", "NumPy", "Claude API", "MQTT", "IoT"]
+    skills: [
+        {
+            title: "BUILD",
+            description: "AI and IoT systems",
+            details: "IoT pipelines and machine learning models that catch failures before they cost downtime. Raspberry Pi sensor nodes, Isolation Forest, CNN vision models, LLM agents on top.",
+            tools: ["Python", "Raspberry Pi", "MQTT", "TensorFlow", "Scikit-learn", "OpenCV", "Isolation Forest", "Groq API", "FastAPI"]
         },
-        design: {
-            title: "DIGITALIZATION",
-            description: "Industrial performance & continuous improvement",
-            details: "Deploying dashboards and full-stack tools that turn shop-floor data into decisions — Power BI reporting, REST APIs, and Lean/TPM methods (5 Whys, Ishikawa, TRS/OEE, Six Sigma) to close the loop between data and action.",
-            tools: ["Power BI", "SQL", "FastAPI", "Docker", "Git", "Arena Simulation", "Lean Six Sigma", "TPM", "Excel"]
+        {
+            title: "MEASURE",
+            description: "Industrial performance",
+            details: "Power BI dashboards, REST APIs and TRS/OEE tracking that give maintenance teams a number they can act on. Lean and TPM method underneath, not just charts.",
+            tools: ["Power BI", "SQL", "Excel", "KNIME", "InfluxDB", "Grafana", "TRS/OEE", "Lean", "TPM"]
+        },
+        {
+            title: "DEPLOY",
+            description: "AI adoption at scale",
+            details: "Taking AI use cases from backlog to daily use across an organization. Scoping, prioritization, workshops and compliance, because a tool nobody adopts is worth nothing.",
+            tools: ["HTML", "CSS", "Docker", "Git", "GitHub", "REST APIs", "Agile", "Change Management", "Vercel"]
         }
-    }
+    ]
 };

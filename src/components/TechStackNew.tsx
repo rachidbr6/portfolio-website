@@ -7,7 +7,7 @@ interface TechItem {
 }
 
 // All tech stack items with their icons and official URLs
-// Inverted pyramid: 9 -> 8 -> 6
+// Inverted pyramid: 9 -> 8 -> 6 -> 5
 const techStack: TechItem[][] = [
   // Row 1 - 9 items (largest) — core languages & tooling
   [
@@ -40,6 +40,14 @@ const techStack: TechItem[][] = [
     { name: "Grafana", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg", url: "https://grafana.com" },
     { name: "Power BI", icon: "https://img.icons8.com/color/48/power-bi.png", url: "https://powerbi.microsoft.com" },
     { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg", url: "https://code.visualstudio.com" },
+  ],
+  // Row 4 - 5 items — web & deployment
+  [
+    { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+    { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+    { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", url: "https://www.mysql.com" },
+    { name: "KNIME", icon: "https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/knime.svg", url: "https://www.knime.com" },
+    { name: "Vercel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg", url: "https://vercel.com" },
   ],
 ];
 
