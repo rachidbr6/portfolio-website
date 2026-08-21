@@ -12,7 +12,7 @@ export const config = {
     },
     about: {
         title: "About Me",
-        description: "I build systems that turn data into decisions people actually act on, then make sure they get used.\n\nI'm a dual degree engineering student at ENSGSI Nancy and Mines Rabat, mixing Python, IoT and AI with industrial method (Lean, TPM, TRS/OEE). At OCP Group I built an IoT pipeline from sensors to live dashboards and used machine learning to catch anomalies before they turned into downtime, cutting analysis time by 40%. The real lesson came from the deployment, not the model: a tool nobody adopts is worth nothing.\n\nIn September I join CPAM de Meurthe-et-Moselle as AI Deployment Project Manager, taking a portfolio of generative AI use cases from backlog to production across 620 people, in a place where health data compliance shapes the design from day one.\n\nOn the side I'm still building the industrial copilot: an LLM that reads sensor alerts, works out what failed, and writes the maintenance report so the technician doesn't have to."
+        description: "I started on the technical side and moved toward the human side on purpose.\n\nSoftware engineering at Mines Rabat taught me how things get built. Industrial engineering and innovation management at ENSGSI Nancy taught me why most of what gets built never lands. That's the space I work in now: between the people who make the technology and the people who have to live with it, making sure something actually changes at the end."
     },
     experiences: [
         {
