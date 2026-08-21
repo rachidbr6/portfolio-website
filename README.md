@@ -1,8 +1,10 @@
 # 🚀 Rachid Bourjila — Portfolio (React + TypeScript + Three.js)
 
-[![3D portfolio preview (click to watch video)](./Screenshot_2026-04-08_22-10-00.png)](./screen-capture%20(13).webm)
+[![Portfolio preview](./readme-preview.png)](https://rachid-bourjila-portfolio.vercel.app)
 
 A modern, high-performance **3D personal portfolio website** built with **React**, **TypeScript**, **Three.js**, **GSAP**, and **WebGL**.
+
+> Live: [rachid-bourjila-portfolio.vercel.app](https://rachid-bourjila-portfolio.vercel.app)
 
 ---
 
@@ -12,7 +14,7 @@ A modern, high-performance **3D personal portfolio website** built with **React*
 - Smooth animations with **GSAP**
 - Modern **React + TypeScript** codebase
 - Fast, responsive UI (desktop + mobile)
-- Designed for developers, engineers, programmers, and creators
+- Real projects, real experience, kept up to date as new work ships
 
 ---
 
@@ -52,17 +54,6 @@ npm run dev
 ```bash
 npm run build
 ```
-
----
-
-## 🧩 Customize (Quick Guide)
-
-Typical things you’ll want to update:
-
-- **Your name + hero section text**
-- **Projects list**
-- **Social links** (GitHub, LinkedIn, email)
-- **SEO meta title/description**
 
 ---
 
