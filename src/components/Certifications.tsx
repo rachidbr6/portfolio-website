@@ -35,6 +35,9 @@ const Certifications = () => {
             onClick={() => setActiveIndex(index)}
             data-cursor="disable"
           >
+            <div className="cert-card-logo">
+              <img src={cert.logo} alt="" loading="lazy" decoding="async" />
+            </div>
             <div className="cert-card-info">
               <h4>{cert.title}</h4>
               <p>{cert.issuer}{cert.date ? ` · ${cert.date}` : ""}</p>

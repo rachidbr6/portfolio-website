@@ -146,16 +146,18 @@ export const config = {
     ],
     certifications: [
         {
-            title: "Introduction to Deep Learning & Neural Networks with Keras",
+            title: "IBM — Deep Learning & Neural Networks with Keras",
             issuer: "IBM · Coursera",
             date: "August 2025",
+            logo: "/images/certificates/ibm-logo.png",
             image: "/images/certificates/ibm-deep-learning-keras.jpg",
             verifyUrl: "https://coursera.org/verify/79049TYEBL3F"
         },
         {
-            title: "CS50x: Introduction to Computer Science",
-            issuer: "Harvard University · CS50",
+            title: "Harvard University — Introduction to Computer Science",
+            issuer: "CS50x · Harvard",
             date: "2025",
+            logo: "/images/certificates/harvard-logo.png",
             image: "/images/certificates/harvard-cs50x.png",
             verifyUrl: "https://cs50.harvard.edu/certificates/c8460a4e-a727-433e-8852-9090e6016434"
         }
