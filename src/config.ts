@@ -144,6 +144,22 @@ export const config = {
             link: "https://github.com/rachidbr6"
         }
     ],
+    certifications: [
+        {
+            title: "Introduction to Deep Learning & Neural Networks with Keras",
+            issuer: "IBM · Coursera",
+            date: "August 2025",
+            image: "/images/certificates/ibm-deep-learning-keras.jpg",
+            verifyUrl: "https://coursera.org/verify/79049TYEBL3F"
+        },
+        {
+            title: "CS50x: Introduction to Computer Science",
+            issuer: "Harvard University · CS50",
+            date: "2025",
+            image: "/images/certificates/harvard-cs50x.png",
+            verifyUrl: "https://cs50.harvard.edu/certificates/c8460a4e-a727-433e-8852-9090e6016434"
+        }
+    ],
     contact: {
         email: "rachid.bourjila13@gmail.com",
         github: "https://github.com/rachidbr6",
