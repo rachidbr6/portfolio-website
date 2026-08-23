@@ -178,13 +178,13 @@ export const config = {
             title: "MEASURE",
             description: "Industrial performance",
             details: "Power BI dashboards, REST APIs and TRS/OEE tracking that give maintenance teams a number they can act on. Lean and TPM method underneath, not just charts.",
-            tools: ["Power BI", "SQL", "Excel", "KNIME", "InfluxDB", "Grafana", "TRS/OEE", "Lean", "TPM"]
+            tools: ["Power BI", "SQL", "Excel", "InfluxDB", "Grafana", "TRS/OEE", "Lean", "TPM"]
         },
         {
             title: "DEPLOY",
             description: "AI adoption at scale",
             details: "Taking AI use cases from backlog to daily use across an organization. Scoping, prioritization, workshops and compliance, because a tool nobody adopts is worth nothing.",
-            tools: ["HTML", "CSS", "Docker", "Git", "GitHub", "REST APIs", "Agile", "Change Management", "Vercel"]
+            tools: ["Use-case scoping", "Prioritization", "Agile", "Facilitation", "GDPR", "Adoption KPIs"]
         }
     ]
 };
