@@ -15,6 +15,25 @@
   width: 100%;
   max-width: calc(100% - 15px);
 }
+.about-photo {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 2px solid var(--accentColor);
+  box-shadow: 0 0 25px rgba(194, 164, 255, 0.35);
+  flex-shrink: 0;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
 .about-me h3 {
   font-size: 18px;
   text-transform: uppercase;
@@ -64,6 +83,10 @@
   .about-me {
     width: 500px;
   }
+  .about-photo {
+    width: 100px;
+    height: 100px;
+  }
   .about-me h3 {
     font-size: 22px;
     letter-spacing: 6px;
@@ -82,6 +105,10 @@
     width: 500px;
     max-width: calc(100% - 70px);
     transform: translateY(0%);
+  }
+  .about-photo {
+    width: 110px;
+    height: 110px;
   }
   .about-me h3 {
     font-size: 25px;
@@ -113,6 +140,11 @@
     padding: 0px;
     width: 50%;
   }
+  .about-photo {
+    width: 7vw;
+    height: 7vw;
+    margin-bottom: 1.6vw;
+  }
   .about-me p {
     font-size: 1.9vw;
     line-height: 2.3vw;
@@ -127,6 +159,11 @@
   }
 }
 @media only screen and (min-width: 1950px) {
+  .about-photo {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 30px;
+  }
   .about-me p {
     font-size: 2.5rem;
     line-height: 2.7rem;
