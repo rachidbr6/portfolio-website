@@ -87,7 +87,7 @@ export const config = {
             technologies: "Python, Isolation Forest, Groq API (Llama 3.3), FastAPI",
             image: "/images/IndustrialAIAssistant.jpg",
             description: "Predictive monitoring system: simulated IoT data, unsupervised anomaly detection, and an LLM agent writing natural-language diagnostics. Exposed through a 3-tab FastAPI dashboard — under 3s latency, ~95% anomaly detection.",
-            link: "https://github.com/rachidbr6"
+            link: "https://github.com/rachidbr6/Assistant-IA-Industriel-Syst-me-de-Surveillance-Pr-dictive"
         },
         {
             id: 2,
@@ -96,7 +96,7 @@ export const config = {
             technologies: "MQTT, InfluxDB, Power BI, Isolation Forest, MCP Protocol",
             image: "/images/OCPPredictiveMaintenance.jpg",
             description: "PFE internship at OCP Group: an IoT pipeline (sensors → MQTT → InfluxDB → Power BI) with anomaly detection, plus an MCP server connecting LLMs to vibration-analysis tools (FFT, bearing defects, remaining life estimation).",
-            link: ""
+            link: "https://github.com/rachidbr6/Maintenance-pr-dictive-IA"
         },
         {
             id: 3,
@@ -105,7 +105,7 @@ export const config = {
             technologies: "Python, EfficientNetB0, ONNX, TensorRT, OpenCV",
             image: "/images/VisualDefectDetection.jpg",
             description: "Computer vision system classifying conforming vs. defective parts (MVTec AD dataset). Fine-tuned EfficientNetB0, deployed on Jetson Nano via TensorRT with real-time OpenCV line simulation — 96.5% accuracy, 97.1% recall.",
-            link: "https://github.com/rachidbr6"
+            link: "https://github.com/rachidbr6/D-tection-de-D-fauts-Visuels-en-Production-Industrielle"
         },
         {
             id: 4,
@@ -114,7 +114,7 @@ export const config = {
             technologies: "PHP, MySQL, Bootstrap, AJAX",
             image: "/images/RAMSA.jpg",
             description: "Leave management platform with hierarchical approval workflow, plus a built-in chatbot answering HR policy questions with no external API dependency.",
-            link: ""
+            link: "https://github.com/rachidbr6/Gestion-cong-s-Chatbot"
         },
         {
             id: 5,
@@ -123,7 +123,7 @@ export const config = {
             technologies: "Power BI, Field Research, Strategic Foresight",
             image: "/images/Agronov.jpg",
             description: "ENSGSI group project for AgrOnov: exploring how AI will reshape farming by 2035 through farmer interviews, prospective scenarios and a strategic roadmap.",
-            link: ""
+            link: "https://github.com/rachidbr6/farmer-in-2035-with-AI"
         },
         {
             id: 6,
@@ -132,7 +132,7 @@ export const config = {
             technologies: "Python, Speech Recognition, Wake Word Detection, Email API",
             image: "/images/Ultron.jpg",
             description: "A personal voice-activated assistant: wake-word activation, reads and triages emails, runs simple tasks, and controls the laptop hands-free.",
-            link: "https://github.com/rachidbr6"
+            link: "https://github.com/rachidbr6/Ultron-Smart-AI-assistant-"
         },
         {
             id: 7,
@@ -141,7 +141,7 @@ export const config = {
             technologies: "Catalog, Search, Tags, Reading Log",
             image: "/images/VictorianLibrary.jpg",
             description: "A personal book library app with a Victorian, card-catalog aesthetic — search, tag and track what you've read through a dedicated reading log.",
-            link: "https://github.com/rachidbr6"
+            link: "https://github.com/rachidbr6/Victolibrary-"
         }
     ],
     certifications: [
