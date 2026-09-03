@@ -178,19 +178,31 @@
 }
 
 @media screen and (max-width: 900px) {
+  .techstack-new {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
   .techstack-content h2 {
     font-size: 50px;
     margin-bottom: 35px;
   }
-  
+
+  /* Flatten the pyramid rows into one evenly-wrapping grid instead of
+     letting each fixed-length row break unevenly in a narrow column */
   .techstack-pyramid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 8px;
+    max-width: 480px;
+    margin: 0 auto;
   }
-  
+
   .techstack-row {
-    gap: 8px;
+    display: contents;
   }
-  
+
   .techstack-item {
     width: 45px;
     height: 56px;
@@ -212,30 +224,27 @@
   .techstack-content h2 {
     font-size: 36px;
   }
-  
+
   .techstack-pyramid {
-    gap: 6px;
+    gap: 10px;
+    max-width: 340px;
   }
-  
-  .techstack-row {
-    gap: 6px;
-  }
-  
+
   .techstack-item {
-    width: 40px;
-    height: 50px;
-    padding: 5px;
-    border-radius: 8px;
+    width: 56px;
+    height: 66px;
+    padding: 6px;
+    border-radius: 10px;
   }
-  
+
   .techstack-item img {
-    width: 20px;
-    height: 20px;
+    width: 26px;
+    height: 26px;
   }
-  
+
   .techstack-item span {
-    font-size: 6px;
-    max-width: 38px;
-    margin-top: 3px;
+    font-size: 8px;
+    max-width: 50px;
+    margin-top: 4px;
   }
 }

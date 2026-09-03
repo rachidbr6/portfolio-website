@@ -227,6 +227,18 @@
     box-sizing: border-box;
   }
 
+  /* Long titles and the year badge fight for space side by side on
+     narrow screens, pushing the year past the edge. Stack instead. */
+  .career-info-in {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .career-info h3 {
+    font-size: 22px;
+  }
+
   .career-timeline {
     left: 0%;
   }
@@ -249,11 +261,11 @@
   }
 
   .career-info-in {
-    gap: 0px;
+    gap: 4px;
   }
 
   .career-info h3 {
-    font-size: 33px;
+    font-size: 20px;
   }
 
   .career-info-in,
