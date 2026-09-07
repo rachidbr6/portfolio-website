@@ -413,7 +413,8 @@ h2.landing-info-h2 {
 
 h2.landing-info-h2.landing-h2-bottom {
   margin-top: 18px;
-  margin-left: 20px;
+  margin-left: 0;
+  text-shadow: 0 0 6px rgba(196, 129, 255, 0.8), 0 0 16px rgba(155, 92, 255, 0.5);
 }
 
 .landing-info-h2.landing-h2-bottom::after {
