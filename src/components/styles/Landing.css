@@ -416,6 +416,10 @@ h2.landing-info-h2.landing-h2-bottom {
   margin-left: 20px;
 }
 
+.landing-info-h2.landing-h2-bottom::after {
+  display: none;
+}
+
 .landing-h2-2 {
   position: absolute;
   top: 0;
