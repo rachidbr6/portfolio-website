@@ -402,6 +402,15 @@ h2.landing-info-h2 {
   margin-left: -5px;
 }
 
+.landing-h2-center {
+  justify-content: center;
+}
+
+h2.landing-info-h2.landing-h2-bottom {
+  margin-top: 18px;
+  margin-left: 20px;
+}
+
 .landing-h2-2 {
   position: absolute;
   top: 0;
