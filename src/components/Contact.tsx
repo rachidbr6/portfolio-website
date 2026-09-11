@@ -113,6 +113,15 @@ const Contact = () => {
           >
             <img src="/images/logo_ensgsi.webp" alt="ENSGSI Nancy" loading="lazy" decoding="async" />
           </a>
+          <a
+            href="https://www.enim.ac.ma/"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cursor="disable"
+            className="footer-ensgsi-logo"
+          >
+            <img src="/images/logo_mines_rabat.png" alt="Mines Rabat" loading="lazy" decoding="async" />
+          </a>
         </div>
       </div>
     </div>
