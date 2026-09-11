@@ -19,6 +19,10 @@ const Landing = ({ children }: PropsWithChildren) => {
               <br />
               {lastName && <span>{lastName.toUpperCase()}</span>}
             </h1>
+            <div className="landing-school-badge">
+              <span>Student at</span>
+              <img src="/images/ensgsi-logo.svg" alt="ENSGSI Nancy" />
+            </div>
           </div>
           <div className="landing-info">
             <h2 className="landing-info-h2">
