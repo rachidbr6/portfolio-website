@@ -103,15 +103,17 @@ const Contact = () => {
             </h5>
           </div>
         </div>
-        <a
-          href="https://ensgsi.univ-lorraine.fr/en/"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-cursor="disable"
-          className="footer-ensgsi-logo"
-        >
-          <img src="/images/logo_ensgsi.webp" alt="ENSGSI Nancy" loading="lazy" decoding="async" />
-        </a>
+        <div className="footer-partner">
+          <a
+            href="https://ensgsi.univ-lorraine.fr/en/"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cursor="disable"
+            className="footer-ensgsi-logo"
+          >
+            <img src="/images/logo_ensgsi.webp" alt="ENSGSI Nancy" loading="lazy" decoding="async" />
+          </a>
+        </div>
       </div>
     </div>
   );
