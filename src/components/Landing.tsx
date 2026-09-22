@@ -43,6 +43,8 @@ const Landing = ({ children }: PropsWithChildren) => {
               loading="eager"
               fetchPriority="high"
               decoding="async"
+              width={900}
+              height={940}
             />
           </div>
         </div>

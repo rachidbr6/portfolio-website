@@ -8,7 +8,7 @@ const About = () => {
     <div className="about-section" id="about">
       <div className="about-me">
         <div className="about-photo">
-          <img src="/images/rachid.jpg" alt="Rachid Bourjila" loading="lazy" decoding="async" />
+          <img src="/images/rachid.jpg" alt="Rachid Bourjila" loading="lazy" decoding="async" width={900} height={940} />
         </div>
         <h3 className="title">{config.about.title}</h3>
         <p className="para hook">{hook}</p>
