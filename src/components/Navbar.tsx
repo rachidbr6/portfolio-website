@@ -34,32 +34,33 @@ const Navbar = () => {
 
     // Handle navigation links
     const links = document.querySelectorAll(".header ul a");
-    links.forEach((elem) => {
-      const element = elem as HTMLAnchorElement;
-      element.addEventListener("click", (e) => {
-        if (window.innerWidth > 1024) {
-          e.preventDefault();
-          const elem = e.currentTarget as HTMLAnchorElement;
-          const section = elem.getAttribute("data-href");
-          if (section && lenis) {
-            const target = document.querySelector(section) as HTMLElement;
-            if (target) {
-              lenis.scrollTo(target, {
-                offset: 0,
-                duration: 1.5,
-              });
-            }
+    const onLinkClick = (e: Event) => {
+      if (window.innerWidth > 1024) {
+        e.preventDefault();
+        const elem = e.currentTarget as HTMLAnchorElement;
+        const section = elem.getAttribute("data-href");
+        if (section && lenis) {
+          const target = document.querySelector(section) as HTMLElement;
+          if (target) {
+            lenis.scrollTo(target, {
+              offset: 0,
+              duration: 1.5,
+            });
           }
         }
-      });
-    });
+      }
+    };
+    links.forEach((elem) => elem.addEventListener("click", onLinkClick));
 
     // Handle resize
-    window.addEventListener("resize", () => {
+    const onResize = () => {
       lenis?.resize();
-    });
+    };
+    window.addEventListener("resize", onResize);
 
     return () => {
+      links.forEach((elem) => elem.removeEventListener("click", onLinkClick));
+      window.removeEventListener("resize", onResize);
       lenis?.destroy();
     };
   }, []);
