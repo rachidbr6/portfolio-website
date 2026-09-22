@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { MdArrowOutward, MdClose } from "react-icons/md";
 import "./styles/Certifications.css";
 import { config } from "../config";
+import { lenis } from "./Navbar";
 
 const Certifications = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -15,10 +16,12 @@ const Certifications = () => {
     };
     document.addEventListener("keydown", onKeyDown);
     document.body.style.overflow = "hidden";
+    lenis?.stop();
 
     return () => {
       document.removeEventListener("keydown", onKeyDown);
       document.body.style.overflow = "";
+      lenis?.start();
     };
   }, [active]);
 
