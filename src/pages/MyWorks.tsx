@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
 import { config } from "../config";
+import { usePageMeta } from "../utils/usePageMeta";
 import "./MyWorks.css";
 
 const MyWorks = () => {
+  usePageMeta({
+    title: "All Works — Rachid Bourjila",
+    path: "/myworks",
+  });
+
   return (
     <div className="myworks-page">
       <div className="myworks-header">

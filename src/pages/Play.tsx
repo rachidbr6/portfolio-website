@@ -2,6 +2,7 @@ import { useState, useCallback, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Chess, Square, PieceSymbol, Color } from "chess.js";
 import RedoxChessEngine from "../utils/redoxchessEngine";
+import { usePageMeta } from "../utils/usePageMeta";
 import "./Play.css";
 
 // Piece SVG components matching chess.com style with custom colors
@@ -63,6 +64,11 @@ Rules:
 8. Use occasional emoji to be friendly 😊`;
 
 const Play = () => {
+  usePageMeta({
+    title: "Play Chess — Rachid Bourjila",
+    path: "/play",
+  });
+
   const [game, setGame] = useState(new Chess());
   const [selectedSquare, setSelectedSquare] = useState<Square | null>(null);
   const [possibleMoves, setPossibleMoves] = useState<Square[]>([]);
