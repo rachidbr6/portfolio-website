@@ -66,12 +66,22 @@ const SocialIcons = () => {
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href={config.contact.github} target="_blank" rel="noopener noreferrer">
+          <a
+            href={config.contact.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Rachid Bourjila on GitHub"
+          >
             <FaGithub />
           </a>
         </span>
         <span>
-          <a href={config.contact.linkedin} target="_blank" rel="noopener noreferrer">
+          <a
+            href={config.contact.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Rachid Bourjila on LinkedIn"
+          >
             <FaLinkedinIn />
           </a>
         </span>
