@@ -158,7 +158,7 @@ export const config = {
             issuer: "CS50x · Harvard",
             date: "2025",
             logo: "/images/certificates/harvard-logo.png",
-            image: "/images/certificates/harvard-cs50x.png",
+            image: "/images/certificates/harvard-cs50x.webp",
             verifyUrl: "https://cs50.harvard.edu/certificates/c8460a4e-a727-433e-8852-9090e6016434"
         }
     ],
