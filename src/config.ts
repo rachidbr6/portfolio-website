@@ -1,3 +1,14 @@
+interface Project {
+    id: number;
+    title: string;
+    category: string;
+    technologies: string;
+    image: string;
+    description: string;
+    link: string;
+    video?: string;
+}
+
 export const config = {
     developer: {
         name: "Rachid",
@@ -143,7 +154,7 @@ export const config = {
             description: "A personal book library app with a Victorian, card-catalog aesthetic — search, tag and track what you've read through a dedicated reading log.",
             link: "https://github.com/rachidbr6/Victolibrary-"
         }
-    ],
+    ] as Project[],
     certifications: [
         {
             title: "IBM — Deep Learning & Neural Networks with Keras",

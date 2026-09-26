@@ -17,11 +17,22 @@ const WorkImage = (props: Props) => {
   const handleMouseEnter = async () => {
     if (props.video) {
       setIsVideo(true);
-      const response = await fetch(`src/assets/${props.video}`);
+      const response = await fetch(`/video/${props.video}`);
       const blob = await response.blob();
       const blobUrl = URL.createObjectURL(blob);
-      setVideo(blobUrl);
+      setVideo((prev) => {
+        if (prev) URL.revokeObjectURL(prev);
+        return blobUrl;
+      });
     }
+  };
+
+  const handleMouseLeave = () => {
+    setIsVideo(false);
+    setVideo((prev) => {
+      if (prev) URL.revokeObjectURL(prev);
+      return "";
+    });
   };
 
   return (
@@ -32,7 +43,7 @@ const WorkImage = (props: Props) => {
             className="work-image-in"
             href={props.link}
             onMouseEnter={handleMouseEnter}
-            onMouseLeave={() => setIsVideo(false)}
+            onMouseLeave={handleMouseLeave}
             target="_blank"
             rel="noopener noreferrer"
             data-cursor={"disable"}
@@ -48,7 +59,7 @@ const WorkImage = (props: Props) => {
             className="work-image-in"
             to={props.link}
             onMouseEnter={handleMouseEnter}
-            onMouseLeave={() => setIsVideo(false)}
+            onMouseLeave={handleMouseLeave}
             data-cursor={"disable"}
           >
             <div className="work-link">
@@ -62,7 +73,7 @@ const WorkImage = (props: Props) => {
         <div
           className="work-image-in"
           onMouseEnter={handleMouseEnter}
-          onMouseLeave={() => setIsVideo(false)}
+          onMouseLeave={handleMouseLeave}
           data-cursor={"disable"}
         >
           <img src={props.image} alt={props.alt} loading="lazy" decoding="async" />
