@@ -51,8 +51,8 @@ export function setOrbScrollTimeline(
     }
   );
 
-  let dockStartXPct: number | null = null;
-  let dockStartYPct: number | null = null;
+  let currentXPct: number | null = null;
+  let currentYPct: number | null = null;
 
   // The "WHAT I DO" heading gets shattered into per-character spans by
   // setSplitText() (see src/components/utils/splitText.ts), which wipes out
@@ -94,15 +94,16 @@ export function setOrbScrollTimeline(
     if (!modelEl || !doEl) return;
 
     if (progress <= 0.001) {
-      dockStartXPct = null;
-      dockStartYPct = null;
-    }
-    if (dockStartXPct === null || dockStartYPct === null) {
-      dockStartXPct = gsap.getProperty(modelEl, "x", "%") as number;
-      dockStartYPct = gsap.getProperty(modelEl, "y", "%") as number;
+      currentXPct = null;
+      currentYPct = null;
     }
 
     const modelRect = modelEl.getBoundingClientRect();
+    if (currentXPct === null || currentYPct === null) {
+      currentXPct = parseFloat(gsap.getProperty(modelEl, "x", "%") as string);
+      currentYPct = parseFloat(gsap.getProperty(modelEl, "y", "%") as string);
+    }
+
     const doRect = doEl.getBoundingClientRect();
     const vw = window.innerWidth;
     const vh = window.innerHeight;
@@ -115,11 +116,15 @@ export function setOrbScrollTimeline(
     const targetXPct = ((targetCenterX - vw / 2) / modelRect.width) * 100;
     const targetYPct = ((targetCenterY - vh / 2) / modelRect.height) * 100;
 
-    const blend = gsap.utils.clamp(0, 1, progress / 0.45);
-    const eased = blend * blend * (3 - 2 * blend);
+    // Exponential follow instead of a two-phase blend: no velocity kink
+    // when it "catches up" to the target, just a continuous, organic chase
+    // that naturally settles into riding along at the same speed.
+    const FOLLOW = 0.16;
+    currentXPct += (targetXPct - currentXPct) * FOLLOW;
+    currentYPct += (targetYPct - currentYPct) * FOLLOW;
 
-    const x = gsap.utils.interpolate(dockStartXPct, targetXPct, eased);
-    const y = gsap.utils.interpolate(dockStartYPct, targetYPct, eased);
+    const x = currentXPct;
+    const y = currentYPct;
 
     const exitStart = -40;
     const exitRange = 220;
