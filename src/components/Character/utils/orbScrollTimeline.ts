@@ -83,14 +83,16 @@ export function setOrbScrollTimeline(
       );
 
     tl3
-      .fromTo(
-        ".character-model",
-        { y: "0%" },
-        { y: "-100%", duration: 4, ease: "none", delay: 1 },
-        0
-      )
-      .fromTo(".whatIDO", { y: 0 }, { y: "15%", duration: 2 }, 0)
-      .to(orbGroup.rotation, { x: -0.04, duration: 2, delay: 1 }, 0);
+      // Settle just to the right of "DO" (not on top of it) as the section
+      // arrives, easing over from wherever the about-section tween left it.
+      .fromTo(".character-model", { x: "-12%" }, { x: "-2%", duration: 0.3, ease: "power2.out" }, 0)
+      // Track scroll 1:1 for the whole section's scroll range instead of
+      // compressing the full -100% travel into a shorter window — that
+      // mismatch made it outrun the heading instead of moving with it as
+      // the section scrolls by.
+      .fromTo(".character-model", { y: "0%" }, { y: "-100%", duration: 1, ease: "none" }, 0)
+      .fromTo(".whatIDO", { y: 0 }, { y: "15%", duration: 0.4 }, 0)
+      .to(orbGroup.rotation, { x: -0.04, duration: 0.4, delay: 0.2 }, 0);
   } else {
     const tM2 = gsap.timeline({
       scrollTrigger: {
