@@ -49,7 +49,10 @@ export function setOrbScrollTimeline(
       .fromTo(".character-model", { x: 0 }, { x: "-25%", duration: 1 }, 0)
       .to(".landing-container", { opacity: 0, duration: 0.4 }, 0)
       .to(".landing-container", { y: "40%", duration: 0.8 }, 0)
-      .fromTo(".about-me", { y: "-50%" }, { y: "0%" }, 0);
+      // Fixed px offset, not a % of .about-me's own (content-dependent) height —
+      // percentage-based offsets grew with the bio content and pulled the about
+      // photo up into the hero's viewport before any scroll happened.
+      .fromTo(".about-me", { y: "-24px" }, { y: "0px" }, 0);
 
     tl2
       .to(
