@@ -51,11 +51,61 @@
   word-spacing: 2px;
 }
 
+.about-profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.about-profile-tag {
+  font-family: "Geist", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 6px 12px;
+  border-radius: 30px;
+  border: 1px solid rgba(194, 164, 255, 0.4);
+  background: rgba(194, 164, 255, 0.08);
+  color: var(--accentColor);
+  white-space: nowrap;
+}
+
 .about-body {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+
+.about-competencies {
+  margin-top: 24px;
+}
+
+.about-competencies h5 {
+  margin: 0 0 10px;
+  font-weight: 300;
+  opacity: 0.5;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-family: "Geist", sans-serif;
+  text-transform: uppercase;
+}
+
+.about-competencies-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.about-competency-tag {
+  font-size: 13px;
+  font-weight: 400;
+  padding: 4px 10px;
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 30px;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .about-body p {
@@ -133,7 +183,7 @@
     max-width: 1920px;
     min-height: var(--vh);
     height: auto;
-    padding: 40px 0;
+    padding: 120px 0 40px;
     opacity: 1;
   }
   .about-me {

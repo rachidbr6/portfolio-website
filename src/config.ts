@@ -13,8 +13,9 @@ export const config = {
     developer: {
         name: "Rachid",
         fullName: "Rachid Bourjila",
-        title: "Software Engineering and Industry 4.0",
-        description: "Engineering student blending industrial IoT, AI/ML, and full-stack development to turn shop-floor data into performance. Convinced that technology only matters when it concretely improves the process."
+        title: "Head of Forward Deployed Engineering",
+        tagline: "Software Engineering → Project Management → AI Deployment",
+        description: "Forward-deployed engineer blending business-process thinking with hands-on AI engineering: deploying AI agents, automation and RAG pipelines on top of IoT and cloud infrastructure, and making sure organizations actually adopt them."
     },
     social: {
         github: "rachidbr6",
@@ -23,7 +24,9 @@ export const config = {
     },
     about: {
         title: "About Me",
-        description: "I started on the technical side and moved toward the human side on purpose.\n\nSoftware engineering at Mines Rabat taught me how things get built. Industrial engineering and innovation management at ENSGSI Nancy taught me why most of what gets built never lands. That's the space I work in now: between the people who make the technology and the people who have to live with it, making sure something actually changes at the end."
+        description: "I started as a software engineer, moved into project management, and landed somewhere more useful: the person who reads how a business actually runs and knows how to deploy AI inside it.\n\nSoftware engineering at Mines Rabat taught me how systems get built. Running AI deployment projects taught me the harder lesson: the model was never the hard part, getting an organization to change around it was. So I built both sides: the workflow read of an IT consultant, and the hands-on engineering, from AI agents and automations to RAG pipelines, running on the IoT and cloud infrastructure underneath.\n\nThat combination is the whole method: analyze the need, design the solution, secure it properly, then track adoption until the performance gain actually holds. Technology nobody uses isn't a solution, it's a line item.",
+        profiles: ["IT Consultant Mindset", "AI Engineer"],
+        competencies: ["Business Process", "Data", "AI Engineering", "AI Transformation"]
     },
     experiences: [
         {
@@ -180,22 +183,28 @@ export const config = {
     },
     skills: [
         {
-            title: "BUILD",
-            description: "AI and IoT systems",
-            details: "IoT pipelines and machine learning models that catch failures before they cost downtime. Raspberry Pi sensor nodes, Isolation Forest, CNN vision models, LLM agents on top.",
-            tools: ["Python", "Raspberry Pi", "MQTT", "TensorFlow", "Scikit-learn", "OpenCV", "Isolation Forest", "Groq API", "FastAPI"]
+            title: "ANALYZE",
+            description: "Business & needs diagnostics",
+            details: "Mapping how the business actually works before touching any technology: process walkthroughs, stakeholder interviews, and separating where AI would genuinely move the needle from where it would just be noise.",
+            tools: ["Process Mapping", "Stakeholder Interviews", "Workflow Analysis", "Requirements Engineering", "Gap Analysis"]
         },
         {
-            title: "MEASURE",
-            description: "Industrial performance",
-            details: "Power BI dashboards, REST APIs and TRS/OEE tracking that give maintenance teams a number they can act on. Lean and TPM method underneath, not just charts.",
-            tools: ["Power BI", "SQL", "Excel", "InfluxDB", "Grafana", "TRS/OEE", "Lean", "TPM"]
+            title: "DESIGN",
+            description: "AI agents, automation & RAG",
+            details: "Turning a validated need into a concrete solution: AI agents for decision support, automations that remove manual steps, and RAG pipelines that put company knowledge in the loop instead of a static chatbot, running on the IoT and cloud infrastructure that feeds them.",
+            tools: ["LLM Agents", "RAG Pipelines", "Workflow Automation", "LangChain", "Vector Databases", "Python", "FastAPI"]
         },
         {
-            title: "DEPLOY",
-            description: "AI adoption at scale",
-            details: "Taking AI use cases from backlog to daily use across an organization. Scoping, prioritization, workshops and compliance, because a tool nobody adopts is worth nothing.",
-            tools: ["Use-case scoping", "Prioritization", "Agile", "Facilitation", "GDPR", "Adoption KPIs"]
+            title: "SECURE",
+            description: "Security & compliance by design",
+            details: "AI deployed inside a company touches real data and real decisions. Access control, data governance and compliance review are built in from the start, not bolted on after an incident.",
+            tools: ["Access Control", "Data Governance", "GDPR", "Risk Assessment", "Audit Trails"]
+        },
+        {
+            title: "ADOPT",
+            description: "Evaluation & adoption at scale",
+            details: "A model that works in a notebook and a tool teams actually use every day are two different problems. Tracking adoption KPIs, running feedback loops, and iterating until the performance gain is real and sustained.",
+            tools: ["Adoption KPIs", "A/B Evaluation", "Power BI", "Feedback Loops", "Change Management"]
         }
     ]
 };
