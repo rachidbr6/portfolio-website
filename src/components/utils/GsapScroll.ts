@@ -193,4 +193,24 @@ export function setAllTimeline() {
       0
     );
   }
+
+  // Background robot comes into focus as the career section approaches
+  // viewport center, and fades back out of focus as it leaves — same
+  // behavior whether scrolling down into it or back up out of it.
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: ".career-section",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true,
+      invalidateOnRefresh: true,
+    },
+  }).to(".career-robot", {
+    keyframes: {
+      "0%": { opacity: 0.05, filter: "blur(6px)" },
+      "50%": { opacity: 0.22, filter: "blur(0px)" },
+      "100%": { opacity: 0.05, filter: "blur(6px)" },
+    },
+    ease: "none",
+  });
 }
