@@ -89,19 +89,38 @@
     /* Hide 'An' if not needed, or keep it static */
   }
 
-  .landing-industry-badge {
-    margin: 0 auto 14px;
+  /* Force static positioning to prevent overlaps */
+  .landing-info h2,
+  h2.landing-info-h2,
+  .landing-h2-1,
+  .landing-h2-info {
+    position: static !important;
+    display: block;
+    width: auto !important;
+    margin: 0 !important;
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+    white-space: normal;
+    text-align: center;
+    height: auto !important;
+    transform: none !important;
+    /* Remove any transforms */
   }
 
-  .landing-main-title {
-    font-size: 26px !important;
-    line-height: 1.2 !important;
-    max-width: 22ch !important;
+  /* Specific styling for the distinct parts */
+  .landing-h2-1 {
+    font-size: 24px !important;
+    color: var(--accentColor);
+    font-weight: 700;
   }
 
-  .landing-main-subtitle {
-    font-size: 13px !important;
-    max-width: 30ch;
+  .landing-h2-info {
+    font-size: 18px !important;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .landing-info-h2::after {
+    display: none;
   }
 
   /* Show mobile photo */
@@ -350,110 +369,58 @@
   align-items: center;
 }
 
-.landing-industry-badge {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  margin-bottom: 14px;
-  border-radius: 50px;
-  border: 1px solid rgba(194, 164, 255, 0.35);
-  background: rgba(194, 164, 255, 0.07);
-  font-family: "Geist", sans-serif;
-  font-size: 11px;
-  font-weight: 600;
+.landing-info h3 {
+  font-size: 22px;
   letter-spacing: 2px;
-  text-transform: uppercase;
+  font-weight: 300;
   color: var(--accentColor);
-  overflow: hidden;
-  white-space: nowrap;
-  width: fit-content;
-}
-
-.landing-industry-badge::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -150%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.25), transparent);
-  animation: industryShimmer 4s ease-in-out infinite;
-  animation-delay: 1s;
-  pointer-events: none;
-}
-
-.landing-industry-badge-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accentColor);
-  box-shadow: 0 0 6px 1px var(--accentColor);
-  animation: industryPulse 1.8s ease-in-out infinite;
-  flex-shrink: 0;
-}
-
-@keyframes industryShimmer {
-  0% {
-    left: -150%;
-  }
-
-  40%,
-  100% {
-    left: 150%;
-  }
-}
-
-@keyframes industryPulse {
-
-  0%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  50% {
-    opacity: 0.4;
-    transform: scale(0.7);
-  }
-}
-
-.landing-main-title {
   margin: 0;
+}
+
+.landing-info h2 {
+  margin: 0;
+  margin-top: 6px;
+  margin-left: 0;
   font-family: "Geist", sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  line-height: 1.2;
-  background: linear-gradient(100deg, #ffffff 30%, #c2a4ff 45%, #ffffff 60%);
-  background-size: 250% 100%;
-  background-clip: text;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.15;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.landing-h2-info {
+  white-space: nowrap;
+}
+
+h2.landing-info-h2 {
+  color: #c481ff;
+  font-size: 19px;
+  margin: 0;
+  margin-top: -6px;
+  font-family: "Geist", sans-serif;
+  font-weight: 600;
+  line-height: 1.15;
+  position: relative;
+}
+
+h2.landing-info-h2.landing-h2-bottom {
+  margin-top: 20px;
+  margin-left: 0;
+  filter: drop-shadow(0 0 10px rgba(155, 92, 255, 0.55)) drop-shadow(0 3px 14px rgba(127, 64, 255, 0.35));
+}
+
+.landing-info-h2.landing-h2-bottom .landing-h2-1 {
+  background: linear-gradient(180deg, #ffffff 0%, #d3baff 40%, #9b5cff 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  animation: titleShine 7s ease-in-out infinite;
-}
-
-@keyframes titleShine {
-  0% {
-    background-position: 220% 0;
-  }
-
-  50% {
-    background-position: 0% 0;
-  }
-
-  100% {
-    background-position: -220% 0;
-  }
-}
-
-.landing-main-subtitle {
-  margin: 10px 0 0;
-  font-family: "Geist", sans-serif;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.55);
-  letter-spacing: 0.2px;
+  letter-spacing: 3px;
 }
 
 @media screen and (min-width: 500px) {
@@ -465,6 +432,10 @@
     z-index: 0;
   }
 
+  .landing-info h3 {
+    font-size: 18px;
+  }
+
   .landing-intro h2 {
     font-size: 18px;
   }
@@ -474,13 +445,13 @@
     line-height: 30px;
   }
 
-  .landing-main-title {
-    font-size: 26px;
-    max-width: 18ch;
+  .landing-info h2 {
+    font-size: 24px;
+    line-height: 1.15;
   }
 
-  .landing-main-subtitle {
-    font-size: 15px;
+  h2.landing-info-h2 {
+    font-size: 22px;
   }
 }
 
@@ -498,13 +469,17 @@
     line-height: 35px;
   }
 
-  .landing-main-title {
-    font-size: 32px;
-    max-width: 20ch;
+  .landing-info h3 {
+    font-size: 25px;
   }
 
-  .landing-main-subtitle {
-    font-size: 16px;
+  .landing-info h2 {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+
+  h2.landing-info-h2 {
+    font-size: 29px;
   }
 }
 
@@ -533,20 +508,17 @@
     top: 51%;
     z-index: inherit;
     text-align: left;
-    align-items: flex-start;
     transform: translate(0%, -50%);
     right: auto;
     left: 66%;
   }
 
-  .landing-main-title {
-    font-size: 19px;
-    max-width: 14ch;
+  .landing-info h2 {
+    font-size: 21px;
   }
 
-  .landing-main-subtitle {
-    font-size: 13px;
-    max-width: 24ch;
+  h2.landing-info-h2 {
+    font-size: 20px;
   }
 }
 
@@ -563,20 +535,9 @@
     top: 51%;
     z-index: inherit;
     text-align: left;
-    align-items: flex-start;
     transform: translate(0%, -50%);
     right: auto;
     left: 70%;
-  }
-
-  .landing-main-title {
-    font-size: 22px;
-    max-width: 16ch;
-  }
-
-  .landing-main-subtitle {
-    font-size: 14px;
-    max-width: 26ch;
   }
 }
 
@@ -590,25 +551,19 @@
     line-height: 55px;
   }
 
-  .landing-main-title {
-    font-size: 28px;
-    max-width: 18ch;
+  .landing-info h3 {
+    font-size: 35px;
   }
 
-  .landing-main-subtitle {
-    font-size: 16px;
-    max-width: 28ch;
-  }
 }
 
 @media screen and (min-width: 1800px) {
-  .landing-main-title {
-    font-size: 32px;
-    max-width: 20ch;
+  .landing-info h2 {
+    font-size: 38px;
+    line-height: 1.15;
   }
 
-  .landing-main-subtitle {
-    font-size: 17px;
-    max-width: 30ch;
+  h2.landing-info-h2 {
+    font-size: 39px;
   }
 }
