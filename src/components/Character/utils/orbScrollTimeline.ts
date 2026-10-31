@@ -89,6 +89,12 @@ export function setOrbScrollTimeline(
         { y: "-100%", duration: 4, ease: "none", delay: 1 },
         0
       )
+      // Fully hide it partway through the exit, independent of its y-position.
+      // Taller WHAT I DO content (more cards) stretches this scroll range, so
+      // a mid-slide fragment of the orb can otherwise end up lingering over
+      // card text for a long stretch of scroll before the position tween
+      // finishes carrying it off-screen.
+      .to(".character-model", { opacity: 0, duration: 1.5, delay: 1 }, 0)
       .fromTo(".whatIDO", { y: 0 }, { y: "15%", duration: 2 }, 0)
       .to(orbGroup.rotation, { x: -0.04, duration: 2, delay: 1 }, 0);
   } else {
