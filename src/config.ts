@@ -15,7 +15,7 @@ export const config = {
         fullName: "Rachid Bourjila",
         title: "Head of Forward Deployed Engineering",
         tagline: "Software Engineering → Project Management → AI Deployment",
-        description: "Forward-deployed engineer blending business-process thinking with hands-on AI engineering — deploying AI agents, automation and RAG pipelines on top of IoT and cloud infrastructure, and making sure organizations actually adopt them."
+        description: "Forward-deployed engineer blending business-process thinking with hands-on AI engineering: deploying AI agents, automation and RAG pipelines on top of IoT and cloud infrastructure, and making sure organizations actually adopt them."
     },
     social: {
         github: "rachidbr6",
@@ -24,7 +24,7 @@ export const config = {
     },
     about: {
         title: "About Me",
-        description: "I started as a software engineer, moved into project management, and landed somewhere more useful: the person who reads how a business actually runs and knows how to deploy AI inside it.\n\nSoftware engineering at Mines Rabat taught me how systems get built. Running AI deployment projects taught me the harder lesson — the model was never the hard part, getting an organization to change around it was. So I built both sides: the workflow read of an IT consultant, and the hands-on engineering — AI agents, automations and RAG pipelines, running on the IoT and cloud infrastructure underneath.\n\nThat combination is the whole method: analyze the need, design the solution, secure it properly, then track adoption until the performance gain actually holds — because technology nobody uses isn't a solution, it's a line item.",
+        description: "I started as a software engineer, moved into project management, and landed somewhere more useful: the person who reads how a business actually runs and knows how to deploy AI inside it.\n\nSoftware engineering at Mines Rabat taught me how systems get built. Running AI deployment projects taught me the harder lesson: the model was never the hard part, getting an organization to change around it was. So I built both sides: the workflow read of an IT consultant, and the hands-on engineering, from AI agents and automations to RAG pipelines, running on the IoT and cloud infrastructure underneath.\n\nThat combination is the whole method: analyze the need, design the solution, secure it properly, then track adoption until the performance gain actually holds. Technology nobody uses isn't a solution, it's a line item.",
         profiles: ["IT Consultant Mindset", "AI Engineer"],
         competencies: ["Business Process", "Data", "AI Engineering", "AI Transformation"]
     },
@@ -185,13 +185,13 @@ export const config = {
         {
             title: "ANALYZE",
             description: "Business & needs diagnostics",
-            details: "Mapping how the business actually works before touching any technology — process walkthroughs, stakeholder interviews, and separating where AI would genuinely move the needle from where it would just be noise.",
+            details: "Mapping how the business actually works before touching any technology: process walkthroughs, stakeholder interviews, and separating where AI would genuinely move the needle from where it would just be noise.",
             tools: ["Process Mapping", "Stakeholder Interviews", "Workflow Analysis", "Requirements Engineering", "Gap Analysis"]
         },
         {
             title: "DESIGN",
             description: "AI agents, automation & RAG",
-            details: "Turning a validated need into a concrete solution: AI agents for decision support, automations that remove manual steps, and RAG pipelines that put company knowledge in the loop instead of a static chatbot — on top of the IoT and cloud infrastructure that feeds them.",
+            details: "Turning a validated need into a concrete solution: AI agents for decision support, automations that remove manual steps, and RAG pipelines that put company knowledge in the loop instead of a static chatbot, running on the IoT and cloud infrastructure that feeds them.",
             tools: ["LLM Agents", "RAG Pipelines", "Workflow Automation", "LangChain", "Vector Databases", "Python", "FastAPI"]
         },
         {

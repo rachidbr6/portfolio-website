@@ -83,6 +83,11 @@ export function setOrbScrollTimeline(
       );
 
     tl3
+      // tl2 (about-section) leaves .character-model's x at -12% and never
+      // resets it. Snap it back to centered before this section's content
+      // even starts scrolling so it doesn't carry that leftover offset into
+      // WHAT I DO and drift into the heading text on the left.
+      .fromTo(".character-model", { x: "-12%" }, { x: "0%", duration: 0.5 }, 0)
       .fromTo(
         ".character-model",
         { y: "0%" },

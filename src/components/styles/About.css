@@ -183,7 +183,7 @@
     max-width: 1920px;
     min-height: var(--vh);
     height: auto;
-    padding: 40px 0;
+    padding: 120px 0 40px;
     opacity: 1;
   }
   .about-me {
