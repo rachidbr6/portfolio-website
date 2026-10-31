@@ -83,23 +83,12 @@ export function setOrbScrollTimeline(
       );
 
     tl3
-      // tl2 (about-section) leaves .character-model's x at -12% and never
-      // resets it. Snap it back to centered before this section's content
-      // even starts scrolling so it doesn't carry that leftover offset into
-      // WHAT I DO and drift into the heading text on the left.
-      .fromTo(".character-model", { x: "-12%" }, { x: "0%", duration: 0.5 }, 0)
       .fromTo(
         ".character-model",
         { y: "0%" },
         { y: "-100%", duration: 4, ease: "none", delay: 1 },
         0
       )
-      // Fully hide it partway through the exit, independent of its y-position.
-      // Taller WHAT I DO content (more cards) stretches this scroll range, so
-      // a mid-slide fragment of the orb can otherwise end up lingering over
-      // card text for a long stretch of scroll before the position tween
-      // finishes carrying it off-screen.
-      .to(".character-model", { opacity: 0, duration: 1.5, delay: 1 }, 0)
       .fromTo(".whatIDO", { y: 0 }, { y: "15%", duration: 2 }, 0)
       .to(orbGroup.rotation, { x: -0.04, duration: 2, delay: 1 }, 0);
   } else {
