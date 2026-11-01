@@ -13,9 +13,10 @@
 .contact-section h3 {
   font-size: 32px;
   font-weight: 400;
-  text-transform: uppercase;
   margin: 0;
   margin-bottom: 30px;
+  font-family: "UnifrakturMaguntia", "Geist", sans-serif;
+  letter-spacing: 1px;
 }
 .contact-flex {
   display: flex;
