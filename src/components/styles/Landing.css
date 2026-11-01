@@ -302,11 +302,13 @@
 
 .landing-intro h1 {
   margin: 0;
+  margin-top: 8px;
   letter-spacing: 2px;
   font-size: 28px;
   line-height: 28px;
   font-weight: 500;
   font-family: "Rubik Glitch", "JetBrains Mono", monospace;
+  text-shadow: 0 0 28px rgba(194, 164, 255, 0.3);
 }
 
 /* Driven by src/components/utils/matrixGlitch.ts: toggled on individual
@@ -324,12 +326,18 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-top: 16px;
+  margin-top: 22px;
   padding: 7px 14px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(194, 164, 255, 0.06);
+  border: 1px solid rgba(194, 164, 255, 0.25);
   border-radius: 50px;
   width: fit-content;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.landing-school-badge:hover {
+  background: rgba(194, 164, 255, 0.1);
+  border-color: rgba(194, 164, 255, 0.45);
 }
 
 .landing-school-badge span {
@@ -532,7 +540,7 @@
   .landing-intro {
     top: 40%;
     left: auto;
-    right: 66%;
+    right: 70%;
     transform: translate(0%, -50%);
   }
 
@@ -562,7 +570,7 @@
   .landing-intro {
     top: 40%;
     left: auto;
-    right: 70%;
+    right: 74%;
     transform: translate(0%, -50%);
   }
 
