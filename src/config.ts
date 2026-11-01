@@ -95,6 +95,15 @@ export const config = {
     ],
     projects: [
         {
+            id: 2,
+            title: "Predictive Maintenance — OCP Group",
+            category: "Industrial IoT / AI",
+            technologies: "MQTT, InfluxDB, Power BI, Isolation Forest, MCP Protocol",
+            image: "/images/OCPPredictiveMaintenance.jpg",
+            description: "PFE internship at OCP Group: an IoT pipeline (sensors → MQTT → InfluxDB → Power BI) with anomaly detection, plus an MCP server connecting LLMs to vibration-analysis tools (FFT, bearing defects, remaining life estimation).",
+            link: "https://github.com/rachidbr6/Maintenance-pr-dictive-IA"
+        },
+        {
             id: 6,
             title: "Ultron — Personal AI Assistant",
             category: "AI / Voice Assistant",
@@ -111,15 +120,6 @@ export const config = {
             image: "/images/VictorianLibrary.jpg",
             description: "A personal book library app with a Victorian, card-catalog aesthetic — search, tag and track what you've read through a dedicated reading log.",
             link: "https://github.com/rachidbr6/Victolibrary-"
-        },
-        {
-            id: 2,
-            title: "Predictive Maintenance — OCP Group",
-            category: "Industrial IoT / AI",
-            technologies: "MQTT, InfluxDB, Power BI, Isolation Forest, MCP Protocol",
-            image: "/images/OCPPredictiveMaintenance.jpg",
-            description: "PFE internship at OCP Group: an IoT pipeline (sensors → MQTT → InfluxDB → Power BI) with anomaly detection, plus an MCP server connecting LLMs to vibration-analysis tools (FFT, bearing defects, remaining life estimation).",
-            link: "https://github.com/rachidbr6/Maintenance-pr-dictive-IA"
         },
         {
             id: 1,
