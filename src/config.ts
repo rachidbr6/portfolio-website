@@ -95,13 +95,22 @@ export const config = {
     ],
     projects: [
         {
-            id: 1,
-            title: "Industrial AI Assistant",
-            category: "AI / IoT",
-            technologies: "Python, Isolation Forest, Groq API (Llama 3.3), FastAPI",
-            image: "/images/IndustrialAIAssistant.jpg",
-            description: "Predictive monitoring system: simulated IoT data, unsupervised anomaly detection, and an LLM agent writing natural-language diagnostics. Exposed through a 3-tab FastAPI dashboard — under 3s latency, ~95% anomaly detection.",
-            link: "https://github.com/rachidbr6/Assistant-IA-Industriel-Syst-me-de-Surveillance-Pr-dictive"
+            id: 6,
+            title: "Ultron — Personal AI Assistant",
+            category: "AI / Voice Assistant",
+            technologies: "Python, Speech Recognition, Wake Word Detection, Email API",
+            image: "/images/Ultron.jpg",
+            description: "A personal voice-activated assistant: wake-word activation, reads and triages emails, runs simple tasks, and controls the laptop hands-free.",
+            link: "https://github.com/rachidbr6/Ultron-Smart-AI-assistant-"
+        },
+        {
+            id: 7,
+            title: "Victorian Library",
+            category: "Personal Project / Web App",
+            technologies: "Catalog, Search, Tags, Reading Log",
+            image: "/images/VictorianLibrary.jpg",
+            description: "A personal book library app with a Victorian, card-catalog aesthetic — search, tag and track what you've read through a dedicated reading log.",
+            link: "https://github.com/rachidbr6/Victolibrary-"
         },
         {
             id: 2,
@@ -111,6 +120,15 @@ export const config = {
             image: "/images/OCPPredictiveMaintenance.jpg",
             description: "PFE internship at OCP Group: an IoT pipeline (sensors → MQTT → InfluxDB → Power BI) with anomaly detection, plus an MCP server connecting LLMs to vibration-analysis tools (FFT, bearing defects, remaining life estimation).",
             link: "https://github.com/rachidbr6/Maintenance-pr-dictive-IA"
+        },
+        {
+            id: 1,
+            title: "Industrial AI Assistant",
+            category: "AI / IoT",
+            technologies: "Python, Isolation Forest, Groq API (Llama 3.3), FastAPI",
+            image: "/images/IndustrialAIAssistant.jpg",
+            description: "Predictive monitoring system: simulated IoT data, unsupervised anomaly detection, and an LLM agent writing natural-language diagnostics. Exposed through a 3-tab FastAPI dashboard — under 3s latency, ~95% anomaly detection.",
+            link: "https://github.com/rachidbr6/Assistant-IA-Industriel-Syst-me-de-Surveillance-Pr-dictive"
         },
         {
             id: 3,
@@ -138,24 +156,6 @@ export const config = {
             image: "/images/Agronov.jpg",
             description: "ENSGSI group project for AgrOnov: exploring how AI will reshape farming by 2035 through farmer interviews, prospective scenarios and a strategic roadmap.",
             link: "https://github.com/rachidbr6/farmer-in-2035-with-AI"
-        },
-        {
-            id: 6,
-            title: "Ultron — Personal AI Assistant",
-            category: "AI / Voice Assistant",
-            technologies: "Python, Speech Recognition, Wake Word Detection, Email API",
-            image: "/images/Ultron.jpg",
-            description: "A personal voice-activated assistant: wake-word activation, reads and triages emails, runs simple tasks, and controls the laptop hands-free.",
-            link: "https://github.com/rachidbr6/Ultron-Smart-AI-assistant-"
-        },
-        {
-            id: 7,
-            title: "Victorian Library",
-            category: "Personal Project / Web App",
-            technologies: "Catalog, Search, Tags, Reading Log",
-            image: "/images/VictorianLibrary.jpg",
-            description: "A personal book library app with a Victorian, card-catalog aesthetic — search, tag and track what you've read through a dedicated reading log.",
-            link: "https://github.com/rachidbr6/Victolibrary-"
         }
     ] as Project[],
     certifications: [
