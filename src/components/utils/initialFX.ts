@@ -1,6 +1,7 @@
 import { TextSplitter } from "../../utils/textSplitter";
 import gsap from "gsap";
 import { lenis } from "../Navbar";
+import { startMatrixGlitchLoop } from "./matrixGlitch";
 
 export function initialFX() {
   document.body.style.overflowY = "auto";
@@ -33,6 +34,8 @@ export function initialFX() {
       delay: 0.3,
     }
   );
+
+  startMatrixGlitchLoop([".landing-intro h2", ".landing-intro h1"]);
 
   const TextProps = { type: "chars,lines", linesClass: "split-h2" };
 
