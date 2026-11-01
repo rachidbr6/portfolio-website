@@ -1,14 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./styles/Loading.css";
 import { useLoading } from "../context/LoadingProvider";
 
 import Marquee from "react-fast-marquee";
+
+const SCRAMBLE_CHARS =
+  "アイウエオカキクケコサシスセソタチツテト0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 const Loading = ({ percent }: { percent: number }) => {
   const { setIsLoading } = useLoading();
   const [loaded, setLoaded] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [clicked, setClicked] = useState(false);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const welcomeRef = useRef<HTMLSpanElement>(null);
 
   if (percent >= 100) {
     setTimeout(() => {
@@ -33,6 +38,99 @@ const Loading = ({ percent }: { percent: number }) => {
     });
   }, [isLoaded]);
 
+  // Matrix-style falling code backdrop.
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas?.getContext("2d");
+    if (!canvas || !ctx) return;
+
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    const fontSize = 16;
+    let width = 0;
+    let height = 0;
+    let columns = 0;
+    let drops: number[] = [];
+
+    const setup = () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      columns = Math.ceil(width / fontSize);
+      drops = new Array(columns).fill(0).map(() => Math.random() * -50);
+    };
+    setup();
+
+    ctx.fillStyle = "#060609";
+    ctx.fillRect(0, 0, width, height);
+
+    if (reducedMotion) {
+      window.addEventListener("resize", setup);
+      return () => window.removeEventListener("resize", setup);
+    }
+
+    let rafId: number;
+    let frame = 0;
+    const draw = () => {
+      rafId = requestAnimationFrame(draw);
+      frame++;
+      if (frame % 2 !== 0) return; // halve the effective frame rate
+
+      ctx.fillStyle = "rgba(6, 6, 9, 0.08)";
+      ctx.fillRect(0, 0, width, height);
+
+      ctx.font = `${fontSize}px "JetBrains Mono", monospace`;
+      for (let i = 0; i < drops.length; i++) {
+        const char =
+          SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)];
+        const y = drops[i] * fontSize;
+        ctx.fillStyle = "rgba(94, 255, 143, 0.75)";
+        ctx.fillText(char, i * fontSize, y);
+        if (y > height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    };
+    draw();
+
+    window.addEventListener("resize", setup);
+    return () => {
+      cancelAnimationFrame(rafId);
+      window.removeEventListener("resize", setup);
+    };
+  }, []);
+
+  // Decode "WELCOME" character by character once loading completes.
+  useEffect(() => {
+    const el = welcomeRef.current;
+    if (!loaded || !el) return;
+
+    const target = "WELCOME";
+    const totalTicks = 16;
+    let tick = 0;
+
+    const id = window.setInterval(() => {
+      tick++;
+      let out = "";
+      for (let i = 0; i < target.length; i++) {
+        const revealAt = (i / target.length) * totalTicks * 0.6 + totalTicks * 0.3;
+        out +=
+          tick >= revealAt
+            ? target[i]
+            : SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)];
+      }
+      el.textContent = out;
+      if (tick >= totalTicks) {
+        el.textContent = target;
+        window.clearInterval(id);
+      }
+    }, 45);
+
+    return () => window.clearInterval(id);
+  }, [loaded]);
+
   function handleMouseMove(e: React.MouseEvent<HTMLElement>) {
     const { currentTarget: target } = e;
     const rect = target.getBoundingClientRect();
@@ -50,16 +148,14 @@ const Loading = ({ percent }: { percent: number }) => {
         </a>
         <div className={`loaderGame ${clicked && "loader-out"}`}>
           <div className="loaderGame-container">
-            <div className="loaderGame-in">
-              {[...Array(27)].map((_, index) => (
-                <div className="loaderGame-line" key={index}></div>
-              ))}
-            </div>
-            <div className="loaderGame-ball"></div>
+            {[...Array(5)].map((_, index) => (
+              <div className="loaderGame-bar" key={index}></div>
+            ))}
           </div>
         </div>
       </div>
       <div className="loading-screen">
+        <canvas ref={canvasRef} className="loading-matrix-canvas" />
         <div className="loading-marquee">
           <Marquee>
             <span>&nbsp; CODE TO ADOPTION &nbsp;</span> <span>&nbsp; AI DEPLOYMENT &nbsp;</span>
@@ -75,13 +171,13 @@ const Loading = ({ percent }: { percent: number }) => {
             <div className="loading-container">
               <div className="loading-content">
                 <div className="loading-content-in">
-                  Loading <span>{percent}%</span>
+                  <span className="loading-prompt">&gt;_</span> Loading <span className="loading-percent">{percent}%</span>
                 </div>
               </div>
               <div className="loading-box"></div>
             </div>
             <div className="loading-content2">
-              <span>Welcome</span>
+              <span ref={welcomeRef}>WELCOME</span>
             </div>
           </div>
         </div>
