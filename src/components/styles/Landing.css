@@ -297,7 +297,9 @@
   font-size: 22px;
   font-weight: 300;
   letter-spacing: 2px;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Rubik Glitch", "JetBrains Mono", monospace;
+  position: relative;
+  animation: heroGlitch 4.5s infinite;
 }
 
 .landing-intro h1 {
@@ -306,7 +308,55 @@
   font-size: 28px;
   line-height: 28px;
   font-weight: 500;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Rubik Glitch", "JetBrains Mono", monospace;
+  position: relative;
+  animation: heroGlitch 4.5s infinite 0.3s;
+}
+
+@keyframes heroGlitch {
+  0%, 82%, 100% {
+    transform: translate(0, 0);
+    text-shadow: none;
+  }
+  83% {
+    transform: translate(-2px, 1px);
+    text-shadow: 2px 0 #ff2fd0, -2px 0 #2ff3ff;
+  }
+  84% {
+    transform: translate(2px, -1px);
+    text-shadow: -3px 0 #ff2fd0, 3px 0 #2ff3ff;
+  }
+  85% {
+    transform: translate(-1px, 0);
+    text-shadow: 1px 0 #2ff3ff, -1px 0 #ff2fd0;
+  }
+  86%, 90% {
+    transform: translate(0, 0);
+    text-shadow: none;
+  }
+  91% {
+    transform: translate(2px, 1px);
+    text-shadow: -2px 0 #ff2fd0, 2px 0 #2ff3ff;
+  }
+  92% {
+    transform: translate(-2px, -1px);
+    text-shadow: 3px 0 #2ff3ff, -3px 0 #ff2fd0;
+  }
+  93% {
+    transform: translate(1px, 0);
+    text-shadow: -1px 0 #ff2fd0, 1px 0 #2ff3ff;
+  }
+  94% {
+    transform: translate(0, 0);
+    text-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-intro h1,
+  .landing-intro h2 {
+    animation: none;
+  }
 }
 
 /* .landing-intro h1 span {
