@@ -41,9 +41,11 @@
   font-weight: 500;
 }
 .navbar-title {
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.2px;
+  font-family: "Alex Brush", cursive;
+  font-weight: 400;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+  color: var(--accentColor);
 }
 @media only screen and (min-width: 500px) {
   .header {
@@ -58,7 +60,7 @@
     color: #eae5ec;
   }
   .navbar-title {
-    font-size: 16px;
+    font-size: 30px;
   }
 }
 @media only screen and (min-width: 900px) {
@@ -78,6 +80,6 @@
     font-size: 16px;
   }
   .navbar-title {
-    font-size: 18px;
+    font-size: 34px;
   }
 }
